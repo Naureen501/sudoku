@@ -1,9 +1,31 @@
-#include <iostream>
+import javax.swing.*;
 
-using namespace std;
 
-int main()
-{
-  cout<<"hi"<<endl;
-  return 0;
+public class SudokuFrame{
+
+        public static final int WIDTH = 600;
+        public static final int HEIGHT = 600;
+
+public static void main(String[] args){
+    JFrame window = new  JFrame("Sudoku");
+    JFrame gameInfo = new JFrame("Instructions");
+    window.setSize(WIDTH, HEIGHT);
+    window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    window.setVisible(true);
+    window.setLocationRelativeTo(null);
+
+    JMenuBar menuBar = new JMenuBar();
+    JMenu file = new JMenu("New Game");
+    menuBar.add(file);
+
+    JMenuItem easy = new JMenuItem("Easy");
+    file.add(easy);
+    JMenuItem medium = new JMenuItem("Medium");
+    file.add(medium);
+    JMenuItem hard = new JMenuItem("Hard");
+    file.add(hard);
+
+    window.setJMenuBar(menuBar);
+
+    }
 }
